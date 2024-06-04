@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<link rel="stylesheet" href="style.css" />
+		<title>Pig Game</title>
+	</head>
+	<body>
+		<main>
+			<section class="player player--0 player--active">
+				<h2 class="name" id="name--0">Player 1</h2>
+				<p class="score" id="score--0">43</p>
+				<div class="current">
+					<p class="current-label">Current</p>
+					<p class="current-score" id="current--0">0</p>
+				</div>
+			</section>
+			<section class="player player--1">
+				<h2 class="name" id="name--1">Player 2</h2>
+				<p class="score" id="score--1">24</p>
+				<div class="current">
+					<p class="current-label">Current</p>
+					<p class="current-score" id="current--1">0</p>
+				</div>
+			</section>
+			<img src="dice-5.png" alt="Playing dice" class="dice" />
+			<button class="btn btn--new">🔄 New game</button>
+			<button class="btn btn--roll">🎲 Roll dice</button>
+			<button class="btn btn--hold">📥 Hold</button>
+			<button class="btn btn--howto">???</button>
+		</main>
+		<div class="modal">
+			<button class="close-modal">&times;</button>
+			<h3>How To Play:</h3>
+			<br />
+			<br />
+			<p>
+				This game requires 2 players.
+				<br />
+				<br />
+				As you click "Roll Dice", the "Current" score will increase. This score
+				is your current score for the turn. If you click "Hold", it will deposit
+				whatever your "current" score is to your bank (The numbers under player
+				1 & 2). If you roll a "1" then it will RESET your current score for the
+				round to "0". The first player to despoit 50 points into their bank wins
+				the game!
+				<br />
+				<br />
+				Will you play it safe? Or will you risk it all?
+			</p>
+		</div>
+		<div class="overlay"></div>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/gsap.min.js"></script>
+		<script src="script.js"></script>
+	</body>
+</html>
